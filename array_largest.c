@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+
+int main() {
+    int arr[100], n, i, largest;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    if (n < 1 || n > 100) {
+        printf("Invalid array size");
+        return 0;
+    }
+
+    printf("Enter array elements:\n");
+
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    largest = arr[0];
+
+    for (i = 1; i < n; i++) {
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+
+    printf("Largest Element = %d", largest);
+
+    return 0;
+}
